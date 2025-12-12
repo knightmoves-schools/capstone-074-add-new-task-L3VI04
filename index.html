@@ -5,14 +5,62 @@
     <title>Task App</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Optional basic styling for better visuals */
+        #task-form {
+            margin-bottom: 20px;
+        }
 
+        #task-form input,
+        #task-form select,
+        #task-form button {
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .task-description {
+            display: inline-block;
+            width: 250px;
+        }
+
+        .task-status {
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        .todo {
+            color: red;
+        }
+
+        .doing {
+            color: orange;
+        }
+
+        .done {
+            color: green;
+        }
     </style>
 </head>
 
 <body>
     <form id="task-form">
-        
+        <!-- Text input for task description -->
+        <input type="text" id="task-input" name="task" placeholder="task description" required>
+
+        <!-- Dropdown for task status -->
+        <select id="status-dropdown" name="status">
+            <option value="todo">todo</option>
+            <option value="doing">doing</option>
+            <option value="done">done</option>
+        </select>
+
+        <!-- Add button -->
+        <button type="submit">Add</button>
     </form>
+
     <div id="tasks">
         <div id="task-row-1" class="row">
             <div id="task-description-1" class="task-description">pack spikes for track meet</div>
